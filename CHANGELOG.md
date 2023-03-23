@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/Devamparikh/Youtube-Clone/compare/v1.0.0...v1.0.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* docs ([d357d50](https://github.com/Devamparikh/Youtube-Clone/commit/d357d500acc6d16e6a03fb20bee36912fd8fedc1))
+* docs ([d357d50](https://github.com/Devamparikh/Youtube-Clone/commit/d357d500acc6d16e6a03fb20bee36912fd8fedc1))
+* docs ([920f42e](https://github.com/Devamparikh/Youtube-Clone/commit/920f42e6800593c07520edd6123521d3f014cb1f))
+
 ## 1.0.0 (2023-03-23)
 
 
