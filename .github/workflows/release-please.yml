@@ -19,4 +19,4 @@ jobs:
           release-type: node
           package-name: release-please-action
           pull-request-header: "Release created at ${{ env.RELEASE_DATE }}"
-          default-branch: stable
+          default-branch: staging
