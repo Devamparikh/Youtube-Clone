@@ -28,18 +28,36 @@ jobs:
       run: |
         set -e
         commit_msg=$(git log -1 --pretty=%B)
-        jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | paste -sd ",")
+        jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | uniq | paste -sd ",")
         echo "::set-output name=jira_ids::$jira_ids"
     - name: Create Jira Release
+      id: create_jira_release
       if: ${{ always() }}
       run: |
         set -e
         latest_tag=${{ steps.get_latest_tag.outputs.result }}
         release_date=$(date +'%Y-%m-%d')
         release_data="{\"name\": \"$latest_tag\", \"projectId\": 10000, \"description\": \"An Automated created release\", \"released\": false, \"releaseDate\": \"$release_date\", \"archived\": false }"
-        curl --fail --request POST \
+        create_release_response=$(curl --fail --request POST \
           --url 'https://devamparikh.atlassian.net/rest/api/3/version' \
           --user 'devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}' \
           --header 'Accept: application/json' \
           --header 'Content-Type: application/json' \
-          --data "$release_data"
+          --data "$release_data")
+        echo $create_release_response
+        release_id=$(echo $create_release_response | jq -r '.id')
+        echo "::set-output name=release_id::$release_id"
+        jira_ids=$(echo "${{ steps.extract_jira_ids.outputs.jira_ids }}")
+        IFS=',' read -ra JIRA_IDS_ARRAY <<< "$jira_ids"
+        for jira_id in "${JIRA_IDS_ARRAY[@]}"
+        do
+          url="https://devamparikh.atlassian.net/rest/api/3/issue/$jira_id"
+          payload=$(printf '{"update": {"fixVersions": [{"add": {"name": "%s"}}]}}' "$latest_tag")
+          update_issue_response=$(curl --request PUT \
+            --url "$url" \
+            --user 'devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}' \
+            --header 'Accept: application/json' \
+            --header 'Content-Type: application/json' \
+            --data "$payload")
+          echo $update_issue_response
+        done
