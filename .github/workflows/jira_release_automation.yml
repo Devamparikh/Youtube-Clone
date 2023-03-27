@@ -1,0 +1,23 @@
+name: Run Python script
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run script
+      run: python jira_release_automation.py
+      env:
+        JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
