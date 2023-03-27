@@ -12,7 +12,7 @@ def get_latest_tag():
     repo_owner = repo_name.split('/')[0]
 
     # Make a request to the GitHub API to get the latest release tag
-    response = requests.get(f'https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest')
+    response = requests.get(f'https://api.github.com/repos/{repo_name}/releases/latest')
     latest_tag = response.json()['tag_name']
 
     return latest_tag
