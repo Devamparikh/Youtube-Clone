@@ -28,8 +28,9 @@ jobs:
       run: |
         set -e
         commit_msg=$(git log -1 --pretty=%B)
-        jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | paste -sd ",")
+        jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{1,}-[0-9]+' | paste -sd ",")
         echo "::set-output name=jira_ids::$jira_ids"
+        echo $jira_ids
     - name: Create Jira Release
       if: ${{ always() }}
       run: |
