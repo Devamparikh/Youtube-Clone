@@ -1,4 +1,4 @@
-name: Extract Jira IDs from commit
+name: Release and Jira Integration
 
 on:
   push:
@@ -6,8 +6,10 @@ on:
       - develop
 
 jobs:
-  extract-jira-ids:
+  release-and-jira:
     runs-on: ubuntu-latest
+    needs: release-please
+    if: ${{ success() }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -24,6 +26,7 @@ jobs:
           console.log(data.tag_name);
           return data.tag_name;
     - name: Extract Jira IDs
+      if: ${{ always() }}
       run: |
         commit_msg=$(git log -1 --pretty=%B)
         jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | paste -sd ",")
