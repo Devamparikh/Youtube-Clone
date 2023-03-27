@@ -43,22 +43,15 @@ jobs:
           --header 'Accept: application/json' \
           --header 'Content-Type: application/json' \
           --data "$release_data"
-    - name: Install Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    - name: Install requests module
+    - name: add fixVersion
       run: |
-            python -m pip install --upgrade pip
-            pip install requests
-    - name: Update Jira Issues
-      run: |
-            set -e
-            for id in $(echo "${{ needs.extract-jira-ids.outputs.jira_ids }}" | tr ',' '\n'); do
-            url="https://devamparikh.atlassian.net/rest/api/3/issue/${id}"
-            auth="devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}"
-            headers="Accept:application/json"
-            payload="{\"fields\":{\"fixVersions\":[{\"name\":\"${{ steps.get_latest_tag.outputs.result }}\"}]}}"
-            response=$(curl --fail --silent --show-error --location --request PUT "${url}" --user "${auth}" --header "${headers}" --data-raw "${payload}")
-            echo "${response}"
-            done
+        for jira_id in $(echo $jira_ids | sed "s/,/ /g")
+        do
+          fix_version="{\"fields\":{\"fixVersions\":[{\"name\":\"$latest_tag\"}]}}"
+          curl --fail --request PUT \
+            --url "https://devamparikh.atlassian.net/rest/api/3/issue/${jira_id}" \
+            --user 'devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}' \
+            --header 'Accept: application/json' \
+            --header 'Content-Type: application/json' \
+            --data "$fix_version"
+        done
