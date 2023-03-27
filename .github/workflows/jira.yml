@@ -1,4 +1,4 @@
-name: Release and Jira Integration
+name: Extract Jira IDs from commit
 
 on:
   push:
@@ -6,10 +6,8 @@ on:
       - develop
 
 jobs:
-  release-and-jira:
+  extract-jira-ids:
     runs-on: ubuntu-latest
-    needs: release-please
-    if: ${{ success() }}
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -31,3 +29,19 @@ jobs:
         commit_msg=$(git log -1 --pretty=%B)
         jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | paste -sd ",")
         echo "::set-output name=jira_ids::$jira_ids"
+    - name: Create Jira Release
+      run: |
+          curl --request POST \
+           --url 'https://devamparikh.atlassian.net/rest/api/3/version' \
+           --user 'devamparikh15@gmail.com:ATATT3xFfGF01fRCVBx861BCAxTztQULOtZbXn7zdExyuKy2N51kCargm8jVI7o06a3-Fr9hxETAhcvL18pSMxzRgj5Ao9XRf1ROPOfPDlkFyD-4RXKTLkTcXeMxVdgJJcruysFV_JlCBwhZVhwkM5J9x7BbZpLlPjIx_li7EL1cS2hOJ_7PQWw=27768DD0' \
+          --header 'Accept: application/json' \
+          --header 'Content-Type: application/json' \
+          --data '{
+            "name": ${{ steps.get_latest_tag.outputs.result }},
+            "projectId": 10000,
+            "description": "An Automated created release",
+            "released": false,
+            "releaseDate": null,
+            "archived": false,
+            "startDate": null
+          }'
