@@ -41,7 +41,6 @@ jobs:
             "projectId": 10000,
             "description": "An Automated created release",
             "released": false,
-            "releaseDate": null,
-            "archived": false,
-            "startDate": null
+            "releaseDate": $(date +'%Y-%m-%d'),
+            "archived": false
           }'
