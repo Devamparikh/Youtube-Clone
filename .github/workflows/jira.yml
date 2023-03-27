@@ -39,7 +39,7 @@ jobs:
         release_data="{\"name\": \"$latest_tag\", \"projectId\": 10000, \"description\": \"An Automated created release\", \"released\": false, \"releaseDate\": \"$release_date\", \"archived\": false }"
         curl --fail --request POST \
           --url 'https://devamparikh.atlassian.net/rest/api/3/version' \
-          --user 'devamparikh15@gmail.com:ATATT3xFfGF0Qql_SvPOA3D7XA1Q9p0pwSulOhO8YH0jX0dTWgAmK46GkI1ZnVOAowSTNcC6iTT9luhA1njc2TNRU94Q-AP3j80oHGdIxsOBS3DMX28QVihyTkpeDfVc01ncgkHYVKFkWdj1WqQMhhMDau8MmWYnEsw0Y7NBMKcLFqbpy6mbku8=2F7FBC4D' \
+          --user 'devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}' \
           --header 'Accept: application/json' \
           --header 'Content-Type: application/json' \
           --data "$release_data"
