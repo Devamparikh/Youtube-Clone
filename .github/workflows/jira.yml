@@ -1,0 +1,30 @@
+name: Extract Jira IDs from commit
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  extract-jira-ids:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Get latest release tag
+      id: get_latest_tag
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { data } = await github.repos.getLatestRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          console.log(data.tag_name);
+          return data.tag_name;
+    - name: Extract Jira IDs
+      run: |
+        commit_msg=$(git log -1 --pretty=%B)
+        jira_ids=$(echo "$commit_msg" | grep -Eo '[A-Z]{2,}-[0-9]+' | paste -sd ",")
+        echo "::set-output name=jira_ids::$jira_ids"
