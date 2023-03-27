@@ -38,7 +38,7 @@ jobs:
         latest_tag=${{ steps.get_latest_tag.outputs.result }}
         release_date=$(date +'%Y-%m-%d')
         release_data="{\"name\": \"$latest_tag\", \"projectId\": 10000, \"description\": \"An Automated created release\", \"released\": false, \"releaseDate\": \"$release_date\", \"archived\": false }"
-        curl --fail --request POST \
+        curl --request POST \
           --url 'https://devamparikh.atlassian.net/rest/api/3/version' \
           --user 'devamparikh15@gmail.com:${{ secrets.JIRA_TOKEN }}' \
           --header 'Accept: application/json' \
