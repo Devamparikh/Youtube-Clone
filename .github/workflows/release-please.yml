@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - staging
+      - stable
 
 permissions:
   contents: write
@@ -19,4 +19,4 @@ jobs:
           release-type: node
           package-name: release-please-action
           pull-request-header: "Release created at ${{ env.RELEASE_DATE }}"
-          default-branch: staging
+          default-branch: stable
