@@ -1,0 +1,34 @@
+name: Conventional Commit Checker
+
+on:
+  push:
+    branches: [ develop, staging, stable ]
+
+jobs:
+  check-commit-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with: 
+          node-version: '14'
+
+      - name: Print versions
+        run: |
+          git --version
+          node --version
+          npm --version
+          npx commitlint --version
+      - name: Install Commitlint 
+        run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
+
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: npx commitlint $(echo $(git log -1 --pretty=%s) > temp.txt) -e temp.txt
+
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: npx commitlint $(echo $(git log -1 --pretty=%s) > temp.txt) -e temp.txt --verbose
