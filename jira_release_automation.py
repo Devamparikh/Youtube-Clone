@@ -69,7 +69,8 @@ def get_issue_fix_version(issue_id):
     response = requests.get(endpoint, headers=headers, auth=auth)
 
     # Extract the fixVersions from the response
-    fix_versions = json.loads(response.text)["fields"]["fixVersions"]
+    data = json.loads(response.text)
+    fix_versions = data["fields"]["fixVersions"]
     if fix_versions:
         return fix_versions[0]["name"]
     else:
