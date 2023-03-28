@@ -74,7 +74,7 @@ def get_issue_fix_version(issue_id):
     if fix_versions:
         return fix_versions[0]["name"]
     else:
-        return None
+        return []
     
 # Function to add Jira release as fixVersion for each issue
 def add_fix_version_to_issues(jira_issue_ids, jira_release_id):
@@ -111,10 +111,14 @@ def add_fix_version_to_issues(jira_issue_ids, jira_release_id):
             })
 
         # Add the existing fixVersions to the payload
-        for fix_version in existing_fix_versions:
-            payload["fields"]["fixVersions"].append({
-                "name": fix_version
-            })
+        if existing_fix_versions is not None:
+            # Convert single object to list
+            if not isinstance(existing_fix_versions, list):
+                existing_fix_versions = [existing_fix_versions]
+            for fix_version in existing_fix_versions:
+                payload["fields"]["fixVersions"].append({
+                    "name": fix_version
+                })
 
         # Send PUT request to update the issue
         issue_url = api_endpoint + issue_id
