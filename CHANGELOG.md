@@ -1,5 +1,45 @@
 # Changelog
 
+## [1.1.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.0.0...v1.1.0) (2023-03-28)
+
+
+### Features
+
+* add jira.yml ([71c3039](https://github.com/Devamparikh/Youtube-Clone/commit/71c30390317d1b8590e11fc652cecfc8e181aa9d))
+* jira_release_automation ([d5e7c74](https://github.com/Devamparikh/Youtube-Clone/commit/d5e7c74bc170dda68a803e8e0c5b812515dcce16))
+* jira_release_automation ([f83752e](https://github.com/Devamparikh/Youtube-Clone/commit/f83752ec9582806d85a58a1bcfffe69c0e3a6233))
+* requirements.txt ([7b8334b](https://github.com/Devamparikh/Youtube-Clone/commit/7b8334b1239ade5ed82235675666eccd39ae0d6c))
+
+
+### Bug Fixes
+
+* commitlint.yml ([28b0656](https://github.com/Devamparikh/Youtube-Clone/commit/28b06562299a2c8cad1399b1280f96bd64723f98))
+* docs ([7ff535e](https://github.com/Devamparikh/Youtube-Clone/commit/7ff535e54c7490658ff3299ed637948abfb0088b))
+* docs ([d357d50](https://github.com/Devamparikh/Youtube-Clone/commit/d357d500acc6d16e6a03fb20bee36912fd8fedc1))
+* docs ([d357d50](https://github.com/Devamparikh/Youtube-Clone/commit/d357d500acc6d16e6a03fb20bee36912fd8fedc1))
+* docs ([920f42e](https://github.com/Devamparikh/Youtube-Clone/commit/920f42e6800593c07520edd6123521d3f014cb1f))
+* jira ([2e7f39a](https://github.com/Devamparikh/Youtube-Clone/commit/2e7f39ad93b1b1b72188c8c070053e52c46925f8))
+* jira ([8da3d75](https://github.com/Devamparikh/Youtube-Clone/commit/8da3d75d9c6d31d40bdf68f18f672b2ca44c90d5))
+* jira ([b76d3ea](https://github.com/Devamparikh/Youtube-Clone/commit/b76d3ea942531d1a83b92b9e562d2711857eb9e3))
+* jira ([f668770](https://github.com/Devamparikh/Youtube-Clone/commit/f66877033c46569d95f2b73a55aa14f6224884d5))
+* jira ([7215132](https://github.com/Devamparikh/Youtube-Clone/commit/7215132307180e9fa506999f06fab148777dedf7))
+* jira ([df501ad](https://github.com/Devamparikh/Youtube-Clone/commit/df501adb982691c2113d74e2dc5e3df840b388f1))
+* jira ([844ad3a](https://github.com/Devamparikh/Youtube-Clone/commit/844ad3aecc4de1ee8562324aa2cc87321b34e821))
+* jira ([2e9ca32](https://github.com/Devamparikh/Youtube-Clone/commit/2e9ca32e6775535463ff6a11fddafea7aebb5334))
+* jira release and release-please ([f1514ad](https://github.com/Devamparikh/Youtube-Clone/commit/f1514ad816243ced6ddcea64bd56ddf0ecd5daad))
+* jira release and release-please ([a2c7dc5](https://github.com/Devamparikh/Youtube-Clone/commit/a2c7dc57f1514d08b6235f0be1a78a7616d0e627))
+* jira_release_automation.py ([2bd0aeb](https://github.com/Devamparikh/Youtube-Clone/commit/2bd0aeba07546f3af8aafa1bfbba09d31efa015f))
+* jira_release_automation.py ([2d7ba34](https://github.com/Devamparikh/Youtube-Clone/commit/2d7ba34a6d42e8d4cd62b23c4ad754e5fe4a57f9))
+* jira_release_automation.py ([ddb14fa](https://github.com/Devamparikh/Youtube-Clone/commit/ddb14fa142a3e8ad20fb75f9a800b74f64cff5f8))
+* jira_release_automation.py ([d6cf5bf](https://github.com/Devamparikh/Youtube-Clone/commit/d6cf5bfe6efaab09752fbbc49a062f370c4b8974))
+* jira.yml ([450c861](https://github.com/Devamparikh/Youtube-Clone/commit/450c8618353b80aa7ce8fc6038f708f3e017f51b))
+* jira.yml ([434f4ad](https://github.com/Devamparikh/Youtube-Clone/commit/434f4ada62b641a7eade2ea79c8bf8d2251bfdfb))
+* jira.yml ([b7737cf](https://github.com/Devamparikh/Youtube-Clone/commit/b7737cfaf50b76e527d0737a44c7678c5ce2eb99))
+* jira.yml ([960e48a](https://github.com/Devamparikh/Youtube-Clone/commit/960e48acd40e9fad3e45b8e80ac358b1efb087a1))
+* jira.yml ([4176b1c](https://github.com/Devamparikh/Youtube-Clone/commit/4176b1c6b6cf64b1bca46e83257b1f4b22a7a063))
+* release-please.yml ([b03e9cc](https://github.com/Devamparikh/Youtube-Clone/commit/b03e9cc1631b80029fdb7a932bef91e345eb9b6d))
+* requirements.txt ([00843f0](https://github.com/Devamparikh/Youtube-Clone/commit/00843f02ffffdc493428dec49ef211a2e73bdc87))
+
 ## 1.0.0 (2023-03-23)
 
 
