@@ -1,0 +1,26 @@
+name: Run Python script
+
+on:
+  push:
+    branches:
+      - stable
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Wait for 2 minutes
+      run: sleep 120
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run script
+      run: python jira_release_automation.py
+      env:
+        JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+    if: contains(github.event.head_commit.message, 'Merge pull request #') && github.event.head_commit.message =~ 'Merge pull request #(\\d)+ from release-please--branches--staging--components--release-please-action'
