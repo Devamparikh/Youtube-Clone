@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.1](https://github.com/Devamparikh/Youtube-Clone/compare/v1.1.0...v1.1.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* jira_release_automation.yml ([1c2a52b](https://github.com/Devamparikh/Youtube-Clone/commit/1c2a52be2da83d001d575d8696644e84219e6433))
+* jira_release_automation.yml ([b85d8ba](https://github.com/Devamparikh/Youtube-Clone/commit/b85d8ba9daa6bd0674b226c6b3c4c9e82a33f726))
+* jira_release_automation.yml ([ed6262e](https://github.com/Devamparikh/Youtube-Clone/commit/ed6262e45fc6b9a36eab088f602c12de7a3b464e))
+* jira_release_automation.yml ([7e78dfe](https://github.com/Devamparikh/Youtube-Clone/commit/7e78dfeb801d621a447f2a7e78c2f281c7551c3a))
+
 ## [1.1.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.0.0...v1.1.0) (2023-03-28)
 
 
