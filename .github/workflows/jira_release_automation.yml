@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: Wait for 2 minutes
-      run: sleep 120
+      run: sleep 60
     - uses: actions/checkout@v2
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
