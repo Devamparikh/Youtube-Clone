@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.1.2...v1.2.0) (2023-03-30)
+
+
+### Features
+
+* new function add ([d475ad4](https://github.com/Devamparikh/Youtube-Clone/commit/d475ad406b7767f965b7e36f0864016646da61c9))
+
 ## [1.1.2](https://github.com/Devamparikh/Youtube-Clone/compare/v1.1.1...v1.1.2) (2023-03-28)
 
 
