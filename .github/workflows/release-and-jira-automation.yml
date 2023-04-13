@@ -24,7 +24,10 @@ jobs:
 
   jira-automation:
     needs: release-please
-    if: github.event_name == 'push' && github.event.ref == 'refs/heads/stable'
+    if: github.event.pull_request.merged == true
+        && github.event.pull_request.state == 'closed'
+        && github.event.pull_request.base.ref == 'stable'
+        && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -40,7 +43,7 @@ jobs:
           repository: Devamparikh/Jira-release-script
           ref: development
       - name: Run script
-        run: python Jira-release-script/jira_release_automation.py 
+        run: python ${{ github.workspace }}/Jira-release-script/jira_release_automation.py 
         env:
           JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
           PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
