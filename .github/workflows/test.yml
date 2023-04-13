@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Print working directory
-      run: pwd
+      run: cd ..
     - name: Print working directory
       run: ls
     - name: Print git log
