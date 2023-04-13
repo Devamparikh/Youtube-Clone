@@ -1,6 +1,6 @@
 {
   "name": "youtube-clone",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
