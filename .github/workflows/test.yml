@@ -22,13 +22,13 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y gawk
 
       - name: Print Git Log
-        run: git show --summary -n 5
+        run: git show --oneline -n 5
 
       - name: Filter Git Log with awk
-        run: git log --pretty=%B | awk "/release-please--branches--stable--components--release-please-action/{print}"
+        run: git show --oneline -n 5 | awk "/release-please--branches--stable--components--release-please-action/{print}"
 
       - name: Filter and Write to Output File
-        run: git log --pretty=%B | awk "/release-please--branches--stable--components--release-please-action/{c++;if(c==2)exit} c==1" > output.txt
+        run: git show --oneline -n 5 | awk "/release-please--branches--stable--components--release-please-action/{c++;if(c==2)exit} c==1" > output.txt
 
       - name: Print Output File
         run: cat output.txt
