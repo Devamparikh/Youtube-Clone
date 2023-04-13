@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: Wait 
-      run: sleep 45
+      run: sleep 45 
     - uses: actions/checkout@v2
       with:
           fetch-depth: 0
