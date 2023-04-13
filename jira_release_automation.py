@@ -38,7 +38,7 @@ def extract_jira_project_id():
     return jira_project_id
 
 def extract_jira_issue_ids():
-    commit_message = subprocess.check_output('git log -3', shell=True).decode('utf-8')
+    commit_message = subprocess.check_output('git log --pretty=%B | awk "/release-please--branches--stable--components--release-please-action/{c++;if(c==2)exit} c==1"', shell=True).decode('utf-8')
     print(commit_message)
     jira_issue_ids = set(re.findall(r'\b[A-Z][A-Z0-9_]+-[1-9][0-9]*', commit_message))
     print(jira_issue_ids)
