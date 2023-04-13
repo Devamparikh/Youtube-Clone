@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.12](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.11...v1.2.12) (2023-04-13)
+
+
+### Bug Fixes
+
+* release automation ([59b03d5](https://github.com/Devamparikh/Youtube-Clone/commit/59b03d517c30a6fb59f5d93aa3222a6503cb9292))
+
 ## [1.2.11](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.10...v1.2.11) (2023-04-13)
 
 
