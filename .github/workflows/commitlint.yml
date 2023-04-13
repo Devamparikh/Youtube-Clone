@@ -11,10 +11,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with: 
-          node-version: '14'
+      - name: Cache Node.js dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-commitlint-${{ hashFiles('**/commitlint.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-node--commitlint-
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Install Commitlint dependencies
+        run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
 
       - name: Print versions
         run: |
@@ -22,8 +34,6 @@ jobs:
           node --version
           npm --version
           npx commitlint --version
-      - name: Install Commitlint 
-        run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
