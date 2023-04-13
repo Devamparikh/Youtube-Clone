@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print Working Directory
-        run: git show 59b03d5
+        run: pwd
 
       - name: Install Git
         run: sudo apt-get update && sudo apt-get install -y git
@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y gawk
 
       - name: Print Git Log
-        run: git log --pretty=%B | awk "/release-please--branches--stable--components--release-please-action/{c++;if(c==2)exit} c==1" > output.txt
+        run: git show 59b03d5
         
       - name: Print Output File
         run: cat output.txt
