@@ -18,6 +18,8 @@ jobs:
     - name: Wait 
       run: sleep 45
     - uses: actions/checkout@v2
+      with:
+          fetch-depth: 0
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
