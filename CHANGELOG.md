@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.2](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.1...v1.2.2) (2023-04-13)
+
+
+### Bug Fixes
+
+* cache dependencies ([f0a8df1](https://github.com/Devamparikh/Youtube-Clone/commit/f0a8df17a5e6dd7dd30a7fcb93567453f9be9653))
+* cache dependencies. ([de31f67](https://github.com/Devamparikh/Youtube-Clone/commit/de31f67e5eca5cc055f2029a908f9355c9284492))
+* delete  jira_release_automation.py file from current repo ([ce64314](https://github.com/Devamparikh/Youtube-Clone/commit/ce64314dea526123169c7b0383e280678c0d27c0))
+* delete jira_release_automation.yml to combine ([9e5f697](https://github.com/Devamparikh/Youtube-Clone/commit/9e5f697d281ad4a906175ea06d05ba4e9841545d))
+* delete release-please.yml ([4b88dab](https://github.com/Devamparikh/Youtube-Clone/commit/4b88dab5ca2f019deab1bfa3b36833e15d79418e))
+* jira-automation will run after release please ([6dc0cc8](https://github.com/Devamparikh/Youtube-Clone/commit/6dc0cc85267d9f03d836b17c1535896b6a9f8a48))
+* Moved jira_release_automation.py file to different repo ([2c313b9](https://github.com/Devamparikh/Youtube-Clone/commit/2c313b9c4ed16c778af9adad49676a02788a43f1))
+
 ## [1.2.1](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.0...v1.2.1) (2023-03-30)
 
 
