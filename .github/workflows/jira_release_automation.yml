@@ -11,7 +11,7 @@ jobs:
     if: github.event.pull_request.merged == true
         && github.event.pull_request.state == 'closed'
         && github.event.pull_request.base.ref == 'stable'
-        && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action'
+        && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action' 
     runs-on: ubuntu-latest
 
     steps:
@@ -24,10 +24,13 @@ jobs:
         python-version: 3.x
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Clone script repository
-      run: git clone https://github.com/Devamparikh/Jira-release-script.git
+    - name: Download script
+      run: |
+        mkdir scripts
+        cd scripts
+        wget https://raw.githubusercontent.com/Devamparikh/Jira-release-script/development/jira_release_automation.py
     - name: Run script
-      run: python Jira-release-script/jira_release_automation.py 
+      run: python scripts/jira_release_automation.py 
       env:
         JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
         PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
