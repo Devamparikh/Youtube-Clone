@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true 
         && github.event.pull_request.state == 'closed'
         && github.event.pull_request.base.ref == 'stable'
         && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action'  
