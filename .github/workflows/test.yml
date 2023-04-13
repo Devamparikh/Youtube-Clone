@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y gawk
 
       - name: Print Git Log
-        run: git log --max-count=5
+        run: git show --summary HEAD~4..HEAD
 
       - name: Filter Git Log with awk
         run: git log --pretty=%B | awk "/release-please--branches--stable--components--release-please-action/{print}"
