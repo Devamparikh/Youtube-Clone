@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y gawk
 
       - name: Print Git Log
-        run: git show 59b03d5
+        run: git log --grep=OPS
         
       - name: Print Output File
         run: cat output.txt
