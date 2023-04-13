@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - stable
+
+permissions:
+  contents: write
+  pull-requests: write
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set release date
+        run: echo "RELEASE_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: release-please-action
+          pull-request-header: "Release created at ${{ env.RELEASE_DATE }}"
+          default-branch: stable
