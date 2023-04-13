@@ -1,10 +1,6 @@
 name: Run Python script
 
 on:
-  workflow_run:
-    workflows: ["release-please"]
-    types:
-      - completed
   pull_request:
     types: [closed] 
     branches:
@@ -12,14 +8,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
     if: github.event.pull_request.merged == true
         && github.event.pull_request.state == 'closed'
         && github.event.pull_request.base.ref == 'stable'
         && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action'
+    runs-on: ubuntu-latest
 
     steps:
+    - name: Wait 
+      run: sleep 45
     - uses: actions/checkout@v2
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
@@ -27,13 +24,10 @@ jobs:
         python-version: 3.x
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Checkout script repository
-      uses: actions/checkout@v2
-      with:
-        repository: Devamparikh/Jira-release-script
-        ref: development
+    - name: Clone script repository
+      run: git clone https://github.com/Devamparikh/Jira-release-script.git
     - name: Run script
-      run: python ${{ github.workspace }}/Jira-release-script/jira_release_automation.py 
+      run: python Jira-release-script/jira_release_automation.py 
       env:
         JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
         PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
