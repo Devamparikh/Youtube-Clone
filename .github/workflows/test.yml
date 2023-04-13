@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Print working directory
       run: pwd
+    - name: Print working directory
+      run: ls
     - name: Print git log
       run: git log --pretty=%B
     - name: Print awk output
