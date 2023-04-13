@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.13](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.12...v1.2.13) (2023-04-13)
+
+
+### Bug Fixes
+
+* checkout with history ([b376ea0](https://github.com/Devamparikh/Youtube-Clone/commit/b376ea0b6e6a4de2ae8921ac652569515f234699))
+* delete ([cc03110](https://github.com/Devamparikh/Youtube-Clone/commit/cc03110bbc597f2b7c3fea9b0c7d8a65805c3758))
+* oneline ([aff49c7](https://github.com/Devamparikh/Youtube-Clone/commit/aff49c7be4d280e97c3351b679297b7dd041e9be))
+* show ([67887da](https://github.com/Devamparikh/Youtube-Clone/commit/67887dac160d95ab5fd9624c5b717633a77263c0))
+* show n ([2712ea4](https://github.com/Devamparikh/Youtube-Clone/commit/2712ea4d18fd089c8c04ac2716b6402cf55cf367))
+* test ([95be95e](https://github.com/Devamparikh/Youtube-Clone/commit/95be95e023af73b7799d71a31af9b1294f84cd71))
+* test ([c7e4faa](https://github.com/Devamparikh/Youtube-Clone/commit/c7e4faa6793eb35a210243a0a1f7c2994004208a))
+* test ([d39e44e](https://github.com/Devamparikh/Youtube-Clone/commit/d39e44e6c062b0be4bf755dc74c7243202c74c02))
+* test ([c4b18f2](https://github.com/Devamparikh/Youtube-Clone/commit/c4b18f26cbd5a26910d14f209205df8397d0088b))
+* test ([c742930](https://github.com/Devamparikh/Youtube-Clone/commit/c742930aec39494101a758f718c67de5dcea8640))
+* test ([cfacc4a](https://github.com/Devamparikh/Youtube-Clone/commit/cfacc4aba7a1de1671bcf8930c797074b83de2a5))
+* test ([3d520dd](https://github.com/Devamparikh/Youtube-Clone/commit/3d520ddb7668895660239501390cd52b51e47a56))
+* test ([ae087dd](https://github.com/Devamparikh/Youtube-Clone/commit/ae087ddee74f3a5506b26f6844aaac49323f9ea7))
+* test ([35772b8](https://github.com/Devamparikh/Youtube-Clone/commit/35772b85f84320a081988d34ce87e06980e0146e))
+* test ([743331d](https://github.com/Devamparikh/Youtube-Clone/commit/743331dfe1406b5e4e5dc89e0e4e8d97f79d3986))
+* test ([bd86578](https://github.com/Devamparikh/Youtube-Clone/commit/bd8657801461f49919e3c9d859f865602e020f8c))
+
 ## [1.2.12](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.11...v1.2.12) (2023-04-13)
 
 
