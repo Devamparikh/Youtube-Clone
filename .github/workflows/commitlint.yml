@@ -23,11 +23,9 @@ jobs:
             ${{ runner.os }}-node--commitlint-
 
       - name: Install Node.js dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm install
 
       - name: Install Commitlint dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm install --save-dev @commitlint/cli @commitlint/config-conventional
 
       - name: Print versions
