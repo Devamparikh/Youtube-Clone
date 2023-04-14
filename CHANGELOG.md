@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.16](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.15...v1.2.16) (2023-04-14)
+
+
+### Bug Fixes
+
+* RELEASE_NAME_PREFIX ([4d1fae0](https://github.com/Devamparikh/Youtube-Clone/commit/4d1fae0b16a516cd458cc467d5d28ebd5046aba2))
+
 ## [1.2.15](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.14...v1.2.15) (2023-04-13)
 
 
