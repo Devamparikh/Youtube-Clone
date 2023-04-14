@@ -39,3 +39,4 @@ jobs:
       env:
         JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
         PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+        RELEASE_NAME_PREFIX: 'Seller'  
