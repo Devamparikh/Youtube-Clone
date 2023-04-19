@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.16...v1.3.0) (2023-04-19)
+
+
+### Features
+
+* fixed changing hero image too soon ([fde536c](https://github.com/Devamparikh/Youtube-Clone/commit/fde536c1cbd4a37f856af776b403bdff35039408))
+
 ## [1.2.16](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.15...v1.2.16) (2023-04-14)
 
 
