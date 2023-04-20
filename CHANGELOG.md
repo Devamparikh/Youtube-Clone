@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.3.0...v1.4.0) (2023-04-20)
+
+
+### Features
+
+* new web page ([784c008](https://github.com/Devamparikh/Youtube-Clone/commit/784c008e50392e1906975de6bca8ba26d131c7d2))
+
 ## [1.3.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.16...v1.3.0) (2023-04-19)
 
 
