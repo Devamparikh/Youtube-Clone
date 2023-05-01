@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.3.0...v1.4.0) (2023-05-01)
+
+
+### Features
+
+* new web page ([784c008](https://github.com/Devamparikh/Youtube-Clone/commit/784c008e50392e1906975de6bca8ba26d131c7d2))
+
+
+### Bug Fixes
+
+* jira release automation ([aca574e](https://github.com/Devamparikh/Youtube-Clone/commit/aca574eaf45e771dbf0a9fa9beab609cfbdad02a))
+* updated readme  ([da5e20a](https://github.com/Devamparikh/Youtube-Clone/commit/da5e20ad22c9b9d90b659cf1cb293e4dc2d36317))
+
 ## [1.3.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.2.16...v1.3.0) (2023-04-19)
 
 
