@@ -2,7 +2,7 @@ name: Conventional Commit Checker
 
 on:
   push:
-    branches: [ develop, staging, stable ]
+    branches-ignore: []
 
 jobs:
   check-commit-message:
@@ -34,10 +34,10 @@ jobs:
           node --version
           npm --version
           npx commitlint --version
-
+          
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
-        run: npx commitlint $(echo $(git log -1 --pretty=%s) > temp.txt) -e temp.txt
+        run: npx commitlint $(echo $(git log --pretty=%s | grep -iv "merge" -m 1) > temp.txt) -e temp.txt
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
