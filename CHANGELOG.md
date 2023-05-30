@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1](https://github.com/Devamparikh/Youtube-Clone/compare/v1.4.0...v1.4.1) (2023-05-30)
+
+
+### Miscellaneous
+
+* update release-please.yml ([e69a5e0](https://github.com/Devamparikh/Youtube-Clone/commit/e69a5e0dd354fbc40c10dc786f560447c6c83a48))
+* update release-please.yml ([bb77b83](https://github.com/Devamparikh/Youtube-Clone/commit/bb77b8359ea94e6c4d5881a10b5e5348b3933396))
+* update release-please.yml ([f021f44](https://github.com/Devamparikh/Youtube-Clone/commit/f021f44175e93724e5f848cf2649750ec66ca8ea))
+
 ## [1.4.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.3.0...v1.4.0) (2023-05-01)
 
 
