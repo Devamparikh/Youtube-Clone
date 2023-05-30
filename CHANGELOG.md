@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/Devamparikh/Youtube-Clone/compare/v1.4.1...v1.4.2) (2023-05-30)
+
+
+### Miscellaneous
+
+* update jira_release_automation.yml ([4f050d4](https://github.com/Devamparikh/Youtube-Clone/commit/4f050d47ddfa4b339609707bda4774f73c0fca11))
+
 ## [1.4.1](https://github.com/Devamparikh/Youtube-Clone/compare/v1.4.0...v1.4.1) (2023-05-30)
 
 
