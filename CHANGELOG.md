@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.0.0](https://github.com/Devamparikh/Youtube-Clone/compare/v2.0.0...v3.0.0) (2023-06-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* create lint-pr.yml
+* update release-please.yml
+
+### Bug Fixes
+
+* create lint-pr.yml ([dfa23bd](https://github.com/Devamparikh/Youtube-Clone/commit/dfa23bd5f0996bf2c436c7f0a0a2f0af7fb77fe9))
+* update release-please.yml ([1aa6956](https://github.com/Devamparikh/Youtube-Clone/commit/1aa695669124489e262c00a62b2273a7c188b660))
+
 ## [2.0.0](https://github.com/Devamparikh/Youtube-Clone/compare/v1.4.4...v2.0.0) (2023-06-01)
 
 
