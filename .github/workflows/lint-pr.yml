@@ -1,13 +1,14 @@
 name: "Lint PR"
 on:
   pull_request_target:
+    branches-ignore: []
     types:
       - opened
       - edited
       - synchronize
 
 jobs:
-  stable:
+  lint-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: amannn/action-semantic-pull-request@v1.2.0
