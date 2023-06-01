@@ -20,4 +20,3 @@ jobs:
           package-name: release-please-action
           pull-request-header: "Release created at ${{ env.RELEASE_DATE }}"
           default-branch: stable
-          changelog-types: '[{"type":"refactor","section":"Miscellaneous","hidden":false}]'
