@@ -1,17 +1,25 @@
 name: Run Python script
 
 on:
-  workflow_run:
-    workflows: ["release-please"]
-    types:
-      - completed
+  pull_request:
+    types: [closed] 
+    branches:
+      - stable
  
 jobs:
   build:
-    if: github.event.workflow_run.conclusion == 'success' 
+    if: github.event.pull_request.merged == true 
+            && github.event.pull_request.state == 'closed'
+            && github.event.pull_request.base.ref == 'stable'
+            && github.event.pull_request.head.ref == 'release-please--branches--stable--components--release-please-action'  
     runs-on: ubuntu-latest
 
     steps:
+    - name: Wait for Release please to succeed
+      uses: lewagon/wait-on-check-action@v1.3.1
+      with:
+          check-name: 'release-please'
+          wait-interval: 40
     - uses: actions/checkout@v2
       with:
           fetch-depth: 0
